@@ -100,11 +100,15 @@
       .brand img { width: 100%; height: 100%; }
       .nav { justify-content: center; gap: 16px; font-size: 10px; letter-spacing: .07em; }
       .nav .nav-cta { padding: 10px 12px; }
-      .hero { height: min(760px, 77svh); min-height: 555px; }
+      .hero { height: min(700px, 74svh); min-height: 530px; }
       h1 { max-width: 460px; font-size: clamp(42px, 10.5vw, 66px); }
-      .hero-copy-wrap { width: calc(100% - 32px); padding: 20px 0 24px; }
-      .hero-copy-box { padding: 23px 20px; }
-      .hero-copy-box .hero-copy { font-size: 14px; line-height: 1.75; }
+      .hero-copy-wrap { width: calc(100% - 32px); padding: 16px 0 20px; }
+      .hero-copy-box { width: min(440px, 88%); padding: 18px; background: rgba(254,252,246,.78); backdrop-filter: blur(3px); }
+      .hero-copy-box h1 { font-size: clamp(35px, 8.8vw, 52px); line-height: 1.02; }
+      .hero-copy-box .eyebrow { margin-bottom: 8px; font-size: 9px; letter-spacing: .14em; }
+      .hero-copy-box .hero-copy { margin-top: 10px; font-size: 13px; line-height: 1.55; }
+      .hero-copy-box .actions { gap: 8px; margin-top: 16px; }
+      .hero-copy-box .button { min-height: 42px; padding: 0 12px; font-size: 9px; letter-spacing: .06em; white-space: nowrap; }
       .hero-photo img { min-height: 0; }
       .section { padding-right: 18px; padding-left: 18px; }
       .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
@@ -125,7 +129,8 @@
       .brand img { width: 100%; height: 100%; }
       .nav { gap: 12px; font-size: 9px; }
       .nav .nav-cta { padding: 9px 10px; }
-      .hero { min-height: 535px; }
+      .hero { min-height: 500px; }
+      .hero-copy-box { padding: 16px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
   </style>
@@ -152,7 +157,7 @@
         <div class="hero-copy-box">
           <p class="eyebrow">Thoughtfully made in Melbourne</p>
           <h1 id="hero-title">Little moments of joy.</h1>
-          <p class="hero-copy">A little something lovely for the people you love. Explore mini dessert cups, chocolate-covered strawberries and sweet gifts made to share.</p>
+          <p class="hero-copy">Mini dessert cups, chocolate-covered strawberries and sweet gifts, made to share.</p>
           <div class="actions">
             <a class="button" href="#collections">Explore the collection</a>
             <a class="button secondary" href="#enquiries">Make an enquiry</a>
