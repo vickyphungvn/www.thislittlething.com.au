@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f4ee">
+  <meta name="theme-color" content="#fefcf6">
   <meta name="description" content="Mini dessert cups, chocolate-covered strawberries and thoughtful sweet gifts, made in Melbourne by thislittlething.">
   <meta property="og:title" content="thislittlething — little moments of joy">
   <meta property="og:description" content="Thoughtfully made dessert cups, chocolate-covered strawberries and sweet gifts in Melbourne.">
@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #f8f4ee;
+      --paper: #fefcf6;
       --cream: #eee5da;
       --ink: #352720;
       --muted: #76685f;
@@ -31,14 +31,14 @@
     img { display: block; width: 100%; }
     .skip-link { position: absolute; top: -50px; left: 16px; z-index: 10; padding: 12px 16px; background: var(--white); }
     .skip-link:focus { top: 12px; }
-    .site-header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 11px clamp(20px, 6vw, 88px); background: rgba(248,244,238,.95); border-bottom: 1px solid rgba(222,212,201,.8); backdrop-filter: blur(12px); }
-    .brand { display: flex; align-items: center; width: 112px; height: 112px; border-radius: 50%; overflow: hidden; flex: 0 0 auto; }
+    .site-header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; flex-direction: column; gap: 7px; padding: 9px 24px 17px; background: rgba(254,252,246,.97); border-bottom: 1px solid rgba(222,212,201,.72); backdrop-filter: blur(12px); }
+    .brand { display: flex; align-items: center; justify-content: center; width: 208px; height: 208px; border-radius: 50%; background: var(--paper); overflow: hidden; flex: 0 0 auto; }
     .brand img { width: 100%; height: 100%; object-fit: contain; }
     .nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 38px); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
     .nav a { text-decoration: none; }
     .nav a:hover { color: var(--rose); }
     .nav .nav-cta { padding: 13px 19px; border: 1px solid var(--ink); border-radius: 99px; }
-    .hero { width: min(1240px, calc(100% - 48px)); margin: 0 auto; padding: clamp(42px, 7vw, 92px) 0 clamp(70px, 10vw, 132px); display: grid; grid-template-columns: .88fr 1.12fr; align-items: center; gap: clamp(28px, 6vw, 86px); }
+    .hero { position: relative; width: 100%; height: clamp(560px, 74svh, 790px); margin: 0; padding: 0; display: block; overflow: hidden; background: var(--cream); }
     .eyebrow { margin: 0 0 22px; color: var(--rose); font-size: 11px; letter-spacing: .19em; line-height: 1.6; text-transform: uppercase; }
     h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
     h1 { max-width: 560px; margin: 0; font-size: clamp(48px, 6.3vw, 84px); line-height: 1.04; letter-spacing: -.045em; }
@@ -48,10 +48,20 @@
     .button:hover { transform: translateY(-2px); background: transparent; color: var(--ink); }
     .button.secondary { background: transparent; color: var(--ink); }
     .button.secondary:hover { background: var(--ink); color: var(--white); }
-    .hero-photo { position: relative; height: 560px; overflow: hidden; background: var(--cream); }
-    .hero-photo img { height: 100%; min-height: 0; object-fit: cover; object-position: center 46%; }
-    .photo-note { position: absolute; right: 18px; bottom: 18px; padding: 10px 14px; background: var(--white); color: var(--ink); font-family: var(--serif); font-size: 13px; }
+    .hero-photo { position: absolute; inset: 0; height: 100%; overflow: hidden; background: var(--cream); }
+    .hero-photo img { height: 100%; min-height: 0; object-fit: cover; object-position: center 45%; }
+    .hero::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(27,17,12,.30), rgba(27,17,12,.05) 68%), linear-gradient(0deg, rgba(27,17,12,.15), transparent 48%); pointer-events: none; }
+    .hero-copy-wrap { position: relative; z-index: 1; display: flex; align-items: flex-end; width: min(1240px, calc(100% - 48px)); height: 100%; margin: 0 auto; padding: clamp(24px, 5vw, 64px) 0; }
+    .hero-copy-box { width: min(590px, 100%); padding: clamp(24px, 4vw, 42px); background: rgba(254,252,246,.94); }
+    .hero-copy-box h1 { font-size: clamp(42px, 5.4vw, 72px); }
+    .hero-copy-box .eyebrow { margin-bottom: 14px; }
+    .hero-copy-box .hero-copy { margin-top: 14px; }
     .intro-band { padding: 23px 20px; background: var(--ink); color: #f8f1e9; text-align: center; font-family: var(--serif); font-size: clamp(17px, 2.2vw, 24px); letter-spacing: .025em; }
+    .about-section { padding: clamp(58px, 8vw, 96px) 24px; background: var(--paper); }
+    .about-inner { width: min(780px, 100%); margin: 0 auto; text-align: center; }
+    .about-inner h2 { margin: 0; font-size: clamp(36px, 4.8vw, 56px); line-height: 1.12; letter-spacing: -.035em; }
+    .about-inner p:not(.eyebrow) { margin: 20px auto 0; color: var(--muted); font-size: 15px; line-height: 1.95; }
+    .about-inner .about-signoff { color: var(--rose); font-family: var(--serif); font-size: 19px; }
     .section { padding: clamp(68px, 9vw, 112px) 24px; }
     .section-inner { width: min(1150px, 100%); margin: 0 auto; }
     .section-heading { max-width: 590px; margin: 0 0 34px; }
@@ -63,7 +73,7 @@
     .photo-card img { aspect-ratio: 4 / 4.65; object-fit: cover; transition: transform .5s ease; }
     .photo-card:hover img { transform: scale(1.025); }
     .photo-card figcaption { padding: 17px 18px 20px; color: var(--muted); font-family: var(--serif); font-size: 15px; text-align: center; }
-    .section-alt { background: #f0e8df; }
+    .section-alt { background: #f6eee6; }
     .strawberry-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; align-items: stretch; }
     .strawberry-grid figure { margin: 0; overflow: hidden; background: var(--white); }
     .strawberry-grid img { height: 100%; min-height: 340px; object-fit: cover; }
@@ -78,23 +88,24 @@
     .gift-photos figure { margin: 0; overflow: hidden; background: var(--white); }
     .gift-photos figure:first-child { margin-bottom: 34px; }
     .gift-photos img { aspect-ratio: 4 / 5; object-fit: cover; }
-    .enquiry { padding: clamp(72px, 10vw, 122px) 24px; background: #e8dcd1; text-align: center; }
+    .enquiry { padding: clamp(72px, 10vw, 122px) 24px; background: #f3e9de; text-align: center; }
     .enquiry-inner { max-width: 700px; margin: 0 auto; }
     .enquiry h2 { margin: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1.1; letter-spacing: -.035em; }
     .enquiry p:not(.eyebrow) { max-width: 495px; margin: 18px auto 27px; color: var(--muted); font-size: 14px; line-height: 1.9; }
     .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 25px clamp(20px, 6vw, 88px); color: var(--muted); font-size: 11px; letter-spacing: .04em; }
     .site-footer a { text-decoration: none; }
     @media (max-width: 760px) {
-      .site-header { padding: 4px 17px 10px; gap: 0; flex-direction: column; }
-      .brand { width: 82px; height: 82px; }
+      .site-header { padding: 5px 12px 12px; gap: 4px; flex-direction: column; }
+      .brand { width: 150px; height: 150px; }
       .brand img { width: 100%; height: 100%; }
       .nav { justify-content: center; gap: 16px; font-size: 10px; letter-spacing: .07em; }
       .nav .nav-cta { padding: 10px 12px; }
-      .hero { width: min(560px, calc(100% - 36px)); grid-template-columns: 1fr; gap: 30px; padding-top: 43px; }
-      h1 { max-width: 460px; font-size: clamp(49px, 12vw, 70px); }
-      .hero-photo { height: 450px; }
+      .hero { height: min(760px, 77svh); min-height: 555px; }
+      h1 { max-width: 460px; font-size: clamp(42px, 10.5vw, 66px); }
+      .hero-copy-wrap { width: calc(100% - 32px); padding: 20px 0 24px; }
+      .hero-copy-box { padding: 23px 20px; }
+      .hero-copy-box .hero-copy { font-size: 14px; line-height: 1.75; }
       .hero-photo img { min-height: 0; }
-      .hero-photo img { max-height: 510px; }
       .section { padding-right: 18px; padding-left: 18px; }
       .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
       .photo-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
@@ -110,11 +121,11 @@
       .site-footer { flex-direction: column; text-align: center; }
     }
     @media (max-width: 390px) {
-      .brand { width: 82px; height: 82px; }
+      .brand { width: 132px; height: 132px; }
       .brand img { width: 100%; height: 100%; }
       .nav { gap: 12px; font-size: 9px; }
       .nav .nav-cta { padding: 9px 10px; }
-      .hero-photo { height: 390px; }
+      .hero { min-height: 535px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
   </style>
@@ -134,21 +145,36 @@
   </header>
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div>
-        <p class="eyebrow">Thoughtfully made in Melbourne</p>
-        <h1 id="hero-title">Little moments of joy.</h1>
-        <p class="hero-copy">A little something lovely for the people you love. Explore mini dessert cups, chocolate-covered strawberries and sweet gifts made to share.</p>
-        <div class="actions">
-          <a class="button" href="#collections">Explore the collection</a>
-          <a class="button secondary" href="#enquiries">Make an enquiry</a>
-        </div>
-      </div>
       <div class="hero-photo">
         <img src="chocolate-covered-strawberries-hands.webp" alt="Chocolate-covered strawberries held ready to share" fetchpriority="high">
-        <span class="photo-note">A little joy, made by hand</span>
+      </div>
+      <div class="hero-copy-wrap">
+        <div class="hero-copy-box">
+          <p class="eyebrow">Thoughtfully made in Melbourne</p>
+          <h1 id="hero-title">Little moments of joy.</h1>
+          <p class="hero-copy">A little something lovely for the people you love. Explore mini dessert cups, chocolate-covered strawberries and sweet gifts made to share.</p>
+          <div class="actions">
+            <a class="button" href="#collections">Explore the collection</a>
+            <a class="button secondary" href="#enquiries">Make an enquiry</a>
+          </div>
+        </div>
       </div>
     </section>
     <div class="intro-band">Made for sharing, gifting and making ordinary days feel special.</div>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="about-inner">
+        <p class="eyebrow">Our story</p>
+        <h2 id="about-title">A little about me</h2>
+        <p>Hello, I’m Vicky, an interior designer with a love for beautiful details and the little things that make life special.</p>
+        <p>As a designer, I’ve always believed that even the smallest details can bring warmth, joy and meaning.</p>
+        <p>That’s how thislittlething began.</p>
+        <p>I wanted to create something small, sweet and thoughtful. Something that feels like a little hug, a little kindness, or a little reminder that someone cares.</p>
+        <p>Whether it’s a simple thank you, a celebration, or just a way to say “I’m thinking of you,” I hope each little creation helps express the feelings that words sometimes can’t.</p>
+        <p>Because sometimes, the littlest things mean the most.</p>
+        <p class="about-signoff">Made with love, from me to you. ♡</p>
+      </div>
+    </section>
 
     <section class="section" id="collections" aria-labelledby="collections-title">
       <div class="section-inner">
