@@ -32,8 +32,8 @@
     .skip-link { position: absolute; top: -50px; left: 16px; z-index: 10; padding: 12px 16px; background: var(--white); }
     .skip-link:focus { top: 12px; }
     .site-header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 11px clamp(20px, 6vw, 88px); background: rgba(248,244,238,.95); border-bottom: 1px solid rgba(222,212,201,.8); backdrop-filter: blur(12px); }
-    .brand { display: flex; align-items: center; width: 190px; height: 112px; overflow: hidden; flex: 0 0 auto; }
-    .brand img { width: 190px; height: 112px; object-fit: cover; object-position: center 59%; }
+    .brand { display: flex; align-items: center; width: 112px; height: 112px; border-radius: 50%; overflow: hidden; flex: 0 0 auto; }
+    .brand img { width: 100%; height: 100%; object-fit: contain; }
     .nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 38px); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
     .nav a { text-decoration: none; }
     .nav a:hover { color: var(--rose); }
@@ -86,8 +86,8 @@
     .site-footer a { text-decoration: none; }
     @media (max-width: 760px) {
       .site-header { padding: 4px 17px 10px; gap: 0; flex-direction: column; }
-      .brand { width: 136px; height: 82px; }
-      .brand img { width: 136px; height: 82px; }
+      .brand { width: 82px; height: 82px; }
+      .brand img { width: 100%; height: 100%; }
       .nav { justify-content: center; gap: 16px; font-size: 10px; letter-spacing: .07em; }
       .nav .nav-cta { padding: 10px 12px; }
       .hero { width: min(560px, calc(100% - 36px)); grid-template-columns: 1fr; gap: 30px; padding-top: 43px; }
@@ -110,8 +110,8 @@
       .site-footer { flex-direction: column; text-align: center; }
     }
     @media (max-width: 390px) {
-      .brand { width: 136px; height: 82px; }
-      .brand img { width: 136px; height: 82px; }
+      .brand { width: 82px; height: 82px; }
+      .brand img { width: 100%; height: 100%; }
       .nav { gap: 12px; font-size: 9px; }
       .nav .nav-cta { padding: 9px 10px; }
       .hero-photo { height: 390px; }
